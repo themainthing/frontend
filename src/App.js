@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import AddForm from "./components/AddForm";
+import React, {useEffect, useState} from 'react';
+import MembersList from "./components/MembersList";
+import FetchData from "./components/FetchData";
+import axios from "axios";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <div className="navbar">
+            <div className="navbar__links">
+                <a href="/add">ADD ACTIVITY</a>
+                <a href="/get">SHOW ACTIVITY</a>
+            </div>
+        </div>
+        <Routes>
+            <Route path="/add" element={<AddForm/>}/>
+            <Route path="/get" element={<FetchData/>}/>
+        </Routes>
+    </BrowserRouter>
   );
 }
 
