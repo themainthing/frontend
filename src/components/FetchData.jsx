@@ -4,7 +4,7 @@ import axios from "axios";
 function FetchData() {
     const [members, setMembers] = useState([])
     useEffect(() => {
-        axios.get('https://34.73.2.246:8080/RepApp/members')
+        axios.get('https://34.73.2.246:8443/RepApp/members')
             .then(res => setMembers(res.data))
     }, []);
     return (
