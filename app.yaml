@@ -1,12 +1,12 @@
+runtime: nodejs12
+
 handlers:
   # Serve all static files with a URL ending with a file extension
   - url: /(.*\..+)$
     static_files: build/\1
     upload: build/(.*\..+)$
-    secure: never
 
-  # Catch-all handler to serve index.html
+  # Catch all handler to serve index.html
   - url: /.*
     static_files: build/index.html
     upload: build/index.html
-    secure: never
