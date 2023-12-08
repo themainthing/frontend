@@ -6,13 +6,13 @@ import {redirect, useNavigate} from "react-router-dom";
 function FetchData() {
     const [members, setMembers] = useState([])
     useEffect(() => {
-        axios.get('https://34.73.2.246:8080/RepApp/members')
+        axios.get('https://35.237.141.104:8443/RepApp/members')
             .then(res => setMembers(res.data))
     }, []);
 
     async function remove(id){
-        await axios.delete('https://34.73.2.246:8080/RepApp/activities'+id)
-        axios.get('https://34.73.2.246:8080/RepApp/members')
+        await axios.delete('https://35.237.141.104:8443/RepApp/activities/'+id)
+        axios.get('https://35.237.141.104:8443/RepApp/members')
             .then(res => setMembers(res.data))
     }
     const router = useNavigate()
@@ -24,7 +24,7 @@ function FetchData() {
                         <div key={member.id}>
                             <h3>{member.id} {member.name}</h3>
                             {member.activities && member.activities.map(activity => (
-                                <div key={member.id}>
+                                <div className='post' key={member.id}>
                                     {activity.date} {activity.subject} {activity.tookTime}h
                                     <MyButton onClick={() => router(`/edit/${activity.id}`)}>EDIT</MyButton>
                                     <MyButton onClick={() => remove(activity.id)}>DELETE</MyButton>

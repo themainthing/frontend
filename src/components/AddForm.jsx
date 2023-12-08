@@ -4,7 +4,7 @@ import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";
 
 const AddForm = () => {
-    const url = "https://34.73.2.246:8080/RepApp/activities"
+    const url = "https://35.237.141.104:8443/RepApp/activities"
     const[data, setData] = useState({
         number_id: null, subject: '', tookTime: null
     })
