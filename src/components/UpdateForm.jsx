@@ -1,25 +1,29 @@
 import React, {useState} from 'react';
-import Axios from 'axios'
+import Axios from "axios";
 import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";
+import {Link, useNavigate, useParams} from "react-router-dom";
 
-const AddForm = () => {
-    const url = "https://34.73.2.246:8080/RepApp/activities"
+const UpdateForm = (props) => {
+    const param = useParams()
+    const router = useNavigate()
+    const url = 'https://34.73.2.246:8080/RepApp/members'+param.id
     const[data, setData] = useState({
         number_id: null, subject: '', tookTime: null
     })
 
-    function submit(e){
-        Axios.post(url, {
+    async function update(e){
+         await Axios.put(url, {
             member: {id: data.number_id},
             subject: data.subject,
             tookTime: data.tookTime
         })
         setData({number_id: null, subject: '', tookTime: null})
-        window.location.reload();
+        router(`/get`)
     }
     return (
         <div>
+            <h3>{url}</h3>
             <MyInput value={data.number_id}
                      onChange={e => setData({...data, number_id: e.target.value})}
                      type="number"
@@ -32,8 +36,8 @@ const AddForm = () => {
                      onChange={e => setData({...data, tookTime: e.target.value})}
                      type="number" step="0.1"
                      placeholder={'took_time'}/><br/>
-            <MyButton onClick={submit}>Send</MyButton>
+            <MyButton onClick={update}>Send</MyButton>
         </div>
     );
 };
-export default AddForm;
+export default UpdateForm;
