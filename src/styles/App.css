@@ -30,15 +30,6 @@
     margin-left: 20px;
 }
 
-.post {
-    display: flex;
-    width: 300px;
-    padding: 8px;
-    border: 2px solid teal;
-    margin-top: 10px;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .form{
     margin-left: 15px;
@@ -50,6 +41,21 @@
     margin-top: 15px;
     margin-left: 15px;
     display: inline-block;
+}
+.post {
+    display: flex;
+    width: 700px;
+    padding: 8px;
+    border: 2px solid teal;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.post__content{
+    align-items: center;
+    width: 700px;
+    justify-content: space-between;
+    display: flex;
 }
 .post__btns {
     display: flex;
