@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import MyButton from "../UI/button/MyButton";
 import {redirect, useNavigate} from "react-router-dom";
+import ActivityItem from "./ActivityItem";
 
 function FetchData() {
     const [members, setMembers] = useState([])
@@ -22,13 +23,13 @@ function FetchData() {
                 members.map(member => {
                     return(
                         <div key={member.id}>
-                            <h3>{member.id} {member.name}</h3>
-                            {member.activities && member.activities.map(activity => (
-                                <div className='post' key={member.id}>
-                                    {activity.date} {activity.subject} {activity.tookTime}h
-                                    <MyButton onClick={() => router(`/edit/${activity.id}`)}>EDIT</MyButton>
-                                    <MyButton onClick={() => remove(activity.id)}>DELETE</MyButton>
+                            <h3>{member.name}
+                                <div className='activityBtn'>
+                                    <MyButton onClick={() => router(`/add/${member.id}`)}>ADD ACTIVITY</MyButton>
                                 </div>
+                            </h3>
+                            {member.activities && member.activities.map(activity => (
+                                <ActivityItem member={member.id} activity={activity} key={activity.id} remove={remove}/>
                             ))}
                         </div>
                     )

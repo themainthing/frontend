@@ -1,0 +1,20 @@
+import React from 'react';
+import MyButton from "../UI/button/MyButton";
+import {useNavigate} from "react-router-dom";
+
+const ActivityItem = ({activity, key, remove, member}) => {
+    const router = useNavigate()
+    return (
+        <div className='post' key={key}>
+            <div className="post__content" style={{textAlign: "center"}}>
+            {activity.date} {activity.subject} {activity.tookTime}h
+                <div className="post__btns">
+            <MyButton onClick={() => router(`/edit/${activity.id}/${member}`)}>EDIT ACTIVITY</MyButton>
+            <MyButton onClick={() => remove(activity.id)}>DELETE ACTIVITY</MyButton>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ActivityItem;

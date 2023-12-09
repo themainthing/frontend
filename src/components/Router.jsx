@@ -7,17 +7,10 @@ import UpdateForm from "./UpdateForm";
 const Router = () => {
     return (
         <BrowserRouter>
-            <div className="navbar">
-                <div className="navbar__links">
-                    <Link to="/">MAIN PAGE</Link><br/>
-                    <Link to="/add">ADD ACTIVITY</Link><br/>
-                    <Link to="/get">SHOW ACTIVITY</Link>
-                </div>
-            </div>
             <Routes>
-                <Route path="/add" element={<AddForm/>}/>
-                <Route path="/edit/:id" element={<UpdateForm/>}/>
-                <Route path="/get" element={<FetchData/>}/>
+                <Route path="/add/:id" element={<AddForm/>}/>
+                <Route path="/edit/:id/:key" element={<UpdateForm/>}/>
+                <Route path="/" element={<FetchData/>}/>
             </Routes>
         </BrowserRouter>
     );

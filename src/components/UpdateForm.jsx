@@ -4,12 +4,12 @@ import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";
 import {Link, useNavigate, useParams} from "react-router-dom";
 
-const UpdateForm = (props) => {
+const UpdateForm = () => {
     const param = useParams()
     const router = useNavigate()
     const url = 'https://35.237.141.104:8443/RepApp/activities/'+param.id
     const[data, setData] = useState({
-        number_id: null, subject: '', tookTime: null
+        number_id: param.key, subject: '', tookTime: null
     })
 
     async function update(e){
@@ -19,12 +19,13 @@ const UpdateForm = (props) => {
             tookTime: data.tookTime
         })
         setData({number_id: null, subject: '', tookTime: null})
-        router(`/get`)
+        router(`/`)
     }
     return (
-        <div>
-            <h3>{url}</h3>
+        <div className='form'>
+            <h3>EDIT YOUR ACTIVITY!</h3>
             <MyInput value={data.number_id}
+                     disabled = {true}
                      onChange={e => setData({...data, number_id: e.target.value})}
                      type="number"
                      placeholder={'member_id'}/><br/>
