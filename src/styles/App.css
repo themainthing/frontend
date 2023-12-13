@@ -60,3 +60,8 @@
 .post__btns {
     display: flex;
 }
+.marksBtn{
+    margin-top: 15px;
+    margin-left: 15px;
+    display: inline-block;
+}

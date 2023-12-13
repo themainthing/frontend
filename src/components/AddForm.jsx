@@ -15,7 +15,7 @@ const AddForm = () => {
 
     async function submit(e){
         await Axios.post(url, {
-            member: {id: data.number_id},
+            memberId: data.number_id,
             subject: data.subject,
             tookTime: data.tookTime
         })

@@ -7,14 +7,15 @@ import {Link, useNavigate, useParams} from "react-router-dom";
 const UpdateForm = () => {
     const param = useParams()
     const router = useNavigate()
-    const url = 'https://35.237.141.104:8443/RepApp/activities/'+param.id
+    const url = 'https://35.237.141.104:8443/RepApp/activities/'
     const[data, setData] = useState({
         number_id: param.key, subject: '', tookTime: null
     })
 
     async function update(e){
          await Axios.put(url, {
-            member: {id: data.number_id},
+             id: param.id,
+            memberId: data.number_id,
             subject: data.subject,
             tookTime: data.tookTime
         })
