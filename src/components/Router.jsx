@@ -3,16 +3,18 @@ import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import AddForm from "./AddForm";
 import FetchData from "./FetchData";
 import UpdateForm from "./UpdateForm";
+import Teams from "./Teams";
+import QuizUI from "./QuizUI";
 
 const Router = () => {
     return (
-        <BrowserRouter>
             <Routes>
                 <Route path="/add/:id" element={<AddForm/>}/>
                 <Route path="/edit/:id/:key" element={<UpdateForm/>}/>
                 <Route path="/" element={<FetchData/>}/>
+                <Route path="/teams" element={<Teams />} />
+                <Route path="/QuizUI" element={<QuizUI/>} />
             </Routes>
-        </BrowserRouter>
     );
 };
 
