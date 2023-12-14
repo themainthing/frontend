@@ -14,7 +14,11 @@ function FetchData() {
     }, []);
 
     async function remove(id){
-        await axios.delete('http://34.118.96.12:8080/RepApp/activities/'+id)
+        await axios.delete('http://34.118.96.12:8080/RepApp/activities',{
+            data: {
+            id: id
+        }
+        })
         axios.get('http://34.118.96.12:8080/RepApp/members',
             { params: {groupId: '1'}
             })
