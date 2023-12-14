@@ -7,7 +7,7 @@ import {Link, useNavigate, useParams} from "react-router-dom";
 const UpdateForm = () => {
     const param = useParams()
     const router = useNavigate()
-    const url = 'https://35.237.141.104:8443/RepApp/activities/'
+    const url = 'http://34.118.96.12:8080/RepApp/activities/'
     const[data, setData] = useState({
         number_id: param.key, subject: '', tookTime: null
     })

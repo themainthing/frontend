@@ -7,15 +7,15 @@ import ActivityItem from "./ActivityItem";
 function FetchData() {
     const [members, setMembers] = useState([])
     useEffect(() => {
-        axios.get('https://35.237.141.104:8443/RepApp/members',
+        axios.get('http://34.118.96.12:8080/RepApp/members',
             { params: {groupId: '1'}
             })
             .then(res => setMembers(res.data))
     }, []);
 
     async function remove(id){
-        await axios.delete('https://35.237.141.104:8443/RepApp/activities/'+id)
-        axios.get('https://35.237.141.104:8443/RepApp/members',
+        await axios.delete('http://34.118.96.12:8080/RepApp/activities/'+id)
+        axios.get('http://34.118.96.12:8080/RepApp/members',
             { params: {groupId: '1'}
             })
             .then(res => setMembers(res.data))
