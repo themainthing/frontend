@@ -8,22 +8,22 @@
   padding: 10px;
 }
 table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    border: 1px solid rgb(40, 40, 250);
-    padding: 8px;
-    text-align: left;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-  th {
-    background-color: #d4977b;
-  }
-  tr{
-    background-color: #e8f9e4;
-  }
+th, td {
+  border: 1px solid rgb(40, 40, 250);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #d4977b;
+}
+tr{
+  background-color: #e8f9e4;
+}
 
   #button{
     width: 110px;
@@ -34,7 +34,7 @@ table {
     cursor: pointer;
     border-radius: 20px;
 }
-input[type=text],[type=date],[type=time],label,select{
+inputt[type=text],[type=date],[type=time],label,select{
   width: 50%;
   padding: 10px;
   display: flex;
@@ -66,7 +66,7 @@ input[type=text],[type=date],[type=time],label,select{
   height: 60px;
   margin-left: 93%;
   margin-top: -60px;
- 
+
 }
 #fontbox{
   padding: 2px 2px;

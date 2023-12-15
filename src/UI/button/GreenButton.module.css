@@ -1,9 +1,9 @@
-.myBtn{
+.GreenButton{
     padding: 5px 15px;
-    color: #3264e3;
+    color: green;
     font-size: 14px;
     background: transparent;
-    border: 1px solid #3264e3;
+    border: 1px solid green;
     margin-left: 5px;
     cursor: pointer;
 }
