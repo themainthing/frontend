@@ -14,8 +14,8 @@ const Teams = () => {
  
 
   useEffect(() => {
-    const greenapi = 'http://34.118.96.12:8080/RepApp/members?groupId=1';
-    const blueapi = 'http://34.118.96.12:8080/RepApp/members?groupId=2';
+    const greenapi = 'http://localhost:9090/RepApp_war_exploded/members?groupId=1';
+    const blueapi = 'http://localhost:9090/RepApp_war_exploded/members?groupId=2';
 
 
     const fetchData = async () => {

@@ -1,9 +1,9 @@
-.myBtn{
+.SmallButton{
     padding: 5px 15px;
-    color: #3264e3;
-    font-size: 14px;
+    color: red;
+    font-size: 8px;
     background: transparent;
-    border: 1px solid #3264e3;
+    border: 1px solid red;
     margin-left: 5px;
     cursor: pointer;
 }
