@@ -3,7 +3,6 @@ import axios from "axios";
 import MyButton from "../UI/button/MyButton";
 import {redirect, useNavigate} from "react-router-dom";
 import ActivityItem from "./ActivityItem";
-import './../externalcss/Home.css';
 
 function FetchData() {
     const [members, setMembers] = useState([])
