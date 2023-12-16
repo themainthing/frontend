@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Router from './Router';
-import QuizUI from './QuizUI';
 import { useNavigate } from 'react-router-dom';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+
 
 const Teams = () => {
   const [memberdataG, setMemberdataG] = useState([]);
@@ -14,8 +12,8 @@ const Teams = () => {
  
 
   useEffect(() => {
-    const greenapi = 'http://localhost:9090/RepApp_war_exploded/members?groupId=1';
-    const blueapi = 'http://localhost:9090/RepApp_war_exploded/members?groupId=2';
+    const greenapi = 'http://localhost:8080/RepApp/members?groupId=1&haveMarksToday=false';
+    const blueapi = 'http://localhost:8080/RepApp/members?groupId=2&haveMarksToday=false';
 
 
     const fetchData = async () => {
