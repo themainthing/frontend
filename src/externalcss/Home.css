@@ -97,3 +97,20 @@ inputt[type=text],[type=date],[type=time],label,select{
 #btable{
   background-color: rgb(143, 169, 206);
 }
+#nav-link{
+  display:inline-flex;
+}
+.nav-button{
+
+  flex-direction: row-reverse;
+  background-color: #5fa4ed;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 100px;
+
+}
+.nav-box{
+  display: inline;
+  margin-left: -900px;
+}
