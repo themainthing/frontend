@@ -3,11 +3,12 @@ import axios from "axios";
 import MyButton from "../UI/button/MyButton";
 import {redirect, useNavigate} from "react-router-dom";
 import ActivityItem from "./ActivityItem";
+import './../externalcss/Home.css';
 
 function FetchData() {
     const [members, setMembers] = useState([])
     useEffect(() => {
-        axios.get('http://34.118.96.12:8080/RepApp/members',
+        axios.get('http://localhost:8080/RepApp/members',
             { params: {groupId: '1'}
             })
             .then(res => setMembers(res.data))
