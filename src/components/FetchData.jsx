@@ -7,9 +7,7 @@ import ActivityItem from "./ActivityItem";
 function FetchData() {
     const [members, setMembers] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8080/RepApp/members',
-            { params: {groupId: '1'}
-            })
+        axios.get('http://localhost:8080/RepApp/members')
             .then(res => setMembers(res.data))
     }, []);
 
@@ -19,9 +17,7 @@ function FetchData() {
             id: id
         }
         })
-        axios.get('http://localhost:8080/RepApp/RepApp/members',
-            { params: {groupId: '1'}
-            })
+        axios.get('http://localhost:8080/RepApp/members')
             .then(res => setMembers(res.data))
     }
     const router = useNavigate()

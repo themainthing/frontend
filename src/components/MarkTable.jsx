@@ -5,6 +5,7 @@ import ActivityItem from "./ActivityItem";
 import {useNavigate} from "react-router-dom";
 import MarkItem from "./MarkItem";
 import GreenButton from "../UI/button/GreenButton";
+import BlueButton from "../UI/button/BlueButton";
 
 const MarkTable = () => {
     const [members, setMembers] = useState([])
@@ -47,7 +48,7 @@ const MarkTable = () => {
                                     : <div>
                                         <h3>{member.name}
                                             <div className='activityBtn'>
-                                                <MyButton onClick={() => router(`/addmark/${member.id}`)}>ADD MARK</MyButton>
+                                                <BlueButton onClick={() => router(`/addmark/${member.id}`)}>ADD MARK</BlueButton>
                                             </div>
                                         </h3>
                                         <div  className="bluemark__container" >
