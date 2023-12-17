@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams} from "react-router-dom";
 
 const TeamDisplay = ({ teamColor, generatedNumber, apiData }) => {
-  const url='http://localhost:8080/RepApp/marks';
+  const url='http://34.118.76.224:8080/RepApp/marks';
   const param = useParams();
   const[data, setData] = useState({
     number_id: param.id,  mark: null

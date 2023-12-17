@@ -7,7 +7,7 @@ import {Link, useNavigate, useParams} from "react-router-dom";
 const UpdateForm = () => {
     const param = useParams()
     const router = useNavigate()
-    const url = 'http://localhost:8080/RepApp/activities/'
+    const url = 'http://34.118.76.224:8080/RepApp/activities/'
     const[data, setData] = useState({
         number_id: param.key, subject: '', tookTime: null
     })

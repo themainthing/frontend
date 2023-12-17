@@ -12,8 +12,8 @@ const Teams = () => {
  
 
   useEffect(() => {
-    const greenapi = 'http://localhost:8080/RepApp/members?groupId=1&haveMarksToday=false';
-    const blueapi = 'http://localhost:8080/RepApp/members?groupId=2&haveMarksToday=false';
+    const greenapi = 'http://34.118.76.224:8080/RepApp/members?groupId=1&haveMarksToday=false';
+    const blueapi = 'http://34.118.76.224:8080/RepApp/members?groupId=2&haveMarksToday=false';
 
 
     const fetchData = async () => {

@@ -8,7 +8,7 @@ import router from "./Router";
 const AddForm = () => {
     const param = useParams()
     const router = useNavigate()
-    const url = "http://localhost:8080/RepApp/activities"
+    const url = "http://34.118.76.224:8080/RepApp/activities"
     const[data, setData] = useState({
         number_id: param.id, subject: '', tookTime: null
     })

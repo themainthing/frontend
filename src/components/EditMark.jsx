@@ -7,7 +7,7 @@ import MyButton from "../UI/button/MyButton";
 const EditMark = () => {
     const param = useParams()
     const router = useNavigate()
-    const url = "http://localhost:8080/RepApp/marks"
+    const url = "http://34.118.76.224:8080/RepApp/marks"
     const[data, setData] = useState({
         number_id: param.id, mark: ''
     })
