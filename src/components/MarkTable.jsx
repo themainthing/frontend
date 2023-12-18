@@ -53,7 +53,7 @@ const MarkTable = () => {
                                         </h3>
                                         <div  className="bluemark__container" >
                                             {member.marks && member.marks.map(mark => (
-                                                <MarkItem member={member.id} mark={mark} key={mark.mark}/>
+                                                <MarkItem member={member.id} mark={mark} key={mark.mark} remove={remove}/>
                                             ))}
                                         </div>
                                     </div>
