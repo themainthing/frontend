@@ -19,7 +19,7 @@ function QuizUI() {
   useEffect(() => {
     const fetchData = async (number, setApiData, teamColor) => {
       try {
-        const response = await fetch(`http://34.118.76.224:8080/RepApp/members?id=${number}`);
+        const response = await fetch(`http://localhost:8080/RepApp/members?id=${number}`);
         const data = await response.json();
         handleDataFetched(data, teamColor);
       } catch (error) {

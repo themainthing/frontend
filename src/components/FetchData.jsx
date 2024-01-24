@@ -7,17 +7,17 @@ import ActivityItem from "./ActivityItem";
 function FetchData() {
     const [members, setMembers] = useState([])
     useEffect(() => {
-        axios.get('http://34.118.76.224:8080/RepApp/members')
+        axios.get('http://localhost:8080/RepApp/members')
             .then(res => setMembers(res.data))
     }, []);
 
     async function remove(id){
-        await axios.delete('http://34.118.76.224:8080/RepApp/activities',{
+        await axios.delete('http://localhost:8080/RepApp/activities',{
             data: {
             id: id
         }
         })
-        axios.get('http://34.118.76.224:8080/RepApp/members')
+        axios.get('http://localhost:8080/RepApp/members')
             .then(res => setMembers(res.data))
     }
     const router = useNavigate()

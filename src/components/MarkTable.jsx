@@ -11,16 +11,16 @@ const MarkTable = () => {
     const [members, setMembers] = useState([])
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get('http://34.118.76.224:8080/RepApp/members')
+        axios.get('http://localhost:8080/RepApp/members')
             .then(res => setMembers(res.data))
     }, []);
     async function remove(id){
-        await axios.delete('http://34.118.76.224:8080/RepApp/marks',{
+        await axios.delete('http://localhost:8080/RepApp/marks',{
             data: {
                 id: id
             }
         })
-        axios.get('http://34.118.76.224:8080/RepApp/members')
+        axios.get('http://localhost:8080/RepApp/members')
             .then(res => setMembers(res.data))
     }
 
